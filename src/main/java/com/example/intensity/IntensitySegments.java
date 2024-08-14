@@ -16,6 +16,9 @@ public class IntensitySegments {
 
     // 增加指定区间[from, to)的强度值
     public void add(int from, int to, int amount) {
+        if (from >= to) {
+            return; // 如果起始点大于或等于终点，不进行任何操作
+        }
         // 在from点增加amount的强度
         update(from, amount);
         // 在to点减少amount的强度（抵消掉区间结束后的强度）
