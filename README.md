@@ -85,6 +85,8 @@ Space Complexity:
 
 The update method might insert two new entries into the TreeMap (from and to points), so in the worst case, the space complexity is O(1) (each add operation only affects two points in the TreeMap).
 Total Space Complexity: O(1)
+
+
 2. update(int point, int amount) Method
 Time Complexity:
 
@@ -94,6 +96,8 @@ Space Complexity:
 
 If the amount plus the current value becomes zero, the point is removed from the TreeMap; otherwise, it is updated or inserted as a new value. Therefore, the space complexity is O(1).
 Total Space Complexity: O(1)
+
+
 3. getIntensity(int point) Method
 Time Complexity:
 
@@ -103,6 +107,8 @@ Space Complexity:
 
 The method does not require additional space, other than a variable to store the intensity. The space complexity is O(1).
 Total Space Complexity: O(1)
+
+
 4. toString() Method
 Time Complexity:
 
@@ -112,6 +118,9 @@ Space Complexity:
 
 This method uses a StringBuilder to construct the string, and the length of the string is proportional to the number of key-value pairs in the TreeMap. Thus, the space complexity is O(n).
 Total Space Complexity: O(n)
+
+
+
 5. set(int from, int to, int amount) Method
 Time Complexity:
 
@@ -119,16 +128,25 @@ getIntensity(from) and getIntensity(to) both have a time complexity of O(n).
 Clearing the range [from, to) in the TreeMap has a time complexity of O(m log n), where m is the number of entries being removed (up to n entries), and n is the total number of key-value pairs in the segments.
 The two update operations each have a time complexity of O(log n).
 Total Time Complexity: O(n + m log n), where m can be up to n.
+
 Space Complexity:
 
 In the worst case, the set operation might insert or update two new entries in the TreeMap. Therefore, the space complexity is O(1).
 Total Space Complexity: O(1)
+
+
 Summary
+
 add Method: Time Complexity O(log n), Space Complexity O(1)
+
 update Method: Time Complexity O(log n), Space Complexity O(1)
+
 getIntensity Method: Time Complexity O(n), Space Complexity O(1)
+
 toString Method: Time Complexity O(n), Space Complexity O(n)
+
 set Method: Time Complexity O(n + m log n), Space Complexity O(1)
+
 
 
 
