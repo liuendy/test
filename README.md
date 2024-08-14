@@ -12,6 +12,8 @@ update(to, -amount): 同样地，更新 to 点的强度的时间复杂度为 O(l
 
 update 方法可能会在 TreeMap 中插入两个新条目（from 和 to 点），所以在最坏情况下，空间复杂度是 O(1)（每次 add 操作只会影响 TreeMap 中的两个点）。
 总空间复杂度: O(1)
+
+
 2. update(int point, int amount) 方法
 时间复杂度:
 
@@ -21,6 +23,8 @@ update 方法可能会在 TreeMap 中插入两个新条目（from 和 to 点）�
 
 如果 amount 加上当前的值变成 0，该点会从 TreeMap 中移除；否则，它会更新或插入一个新的值。因此，空间复杂度是 O(1)。
 总空间复杂度: O(1)
+
+
 3. getIntensity(int point) 方法
 时间复杂度:
 
@@ -30,6 +34,8 @@ update 方法可能会在 TreeMap 中插入两个新条目（from 和 to 点）�
 
 该方法不需要额外的空间，除了用于存储强度的变量。空间复杂度为 O(1)。
 总空间复杂度: O(1)
+
+
 4. toString() 方法
 时间复杂度:
 
@@ -39,6 +45,8 @@ toString 方法遍历 TreeMap 中的所有键值对并构建一个字符串表�
 
 该方法使用了 StringBuilder 来构建字符串，生成的字符串的长度与 TreeMap 中的键值对数量有关。因此，空间复杂度也是 O(n)。
 总空间复杂度: O(n)
+
+
 5. set(int from, int to, int amount) 方法
 时间复杂度:
 
@@ -50,7 +58,10 @@ getIntensity(from) 和 getIntensity(to) 的时间复杂度都是 O(n)。
 
 在最坏情况下，set 操作可能会更新或插入两个新条目。因此，空间复杂度是 O(1)。
 总空间复杂度: O(1)
+
+
 总结
+
 add 方法: 时间复杂度 O(log n)，空间复杂度 O(1)
 update 方法: 时间复杂度 O(log n)，空间复杂度 O(1)
 getIntensity 方法: 时间复杂度 O(n)，空间复杂度 O(1)
